@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scoreness.gd" type="Script" id=1]
+
+[node name="Scoreness" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 65.8214
+margin_top = 54.3186
+margin_right = 105.821
+margin_bottom = 68.3186
+rect_scale = Vector2( 2.39947, 2.39947 )
+custom_colors/font_color = Color( 0, 0.764706, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 0, 0, 1 )
+text = "Score:"
+__meta__ = {
+"_edit_use_anchors_": false
+}

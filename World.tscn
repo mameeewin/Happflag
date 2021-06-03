@@ -1,0 +1,197 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Tiles.png" type="Texture" id=1]
+[ext_resource path="res://KinematicBody2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Back.png" type="Texture" id=3]
+[ext_resource path="res://COin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://flag.png" type="Texture" id=7]
+[ext_resource path="res://B.gd" type="Script" id=8]
+[ext_resource path="res://Scoreness.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Player.png" type="Texture" id=10]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "Tiles.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="Animation" id=3]
+resource_name = "s"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[node name="World" type="Node2D"]
+position = Vector2( -13.4199, 11.0958 )
+
+[node name="Back" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.231373 )
+position = Vector2( 1241.94, 931.874 )
+scale = Vector2( 19.1172, 9.97072 )
+texture = ExtResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 332.33, 27.0262 )
+
+[node name="Area2D6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 653.844, 304.075 )
+
+[node name="Area2D7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 225.983, 268.535 )
+
+[node name="Area2D8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 197.523, 266.954 )
+
+[node name="Area2D9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 162.212, 266.954 )
+
+[node name="Area2D10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 125.319, 263.265 )
+
+[node name="Area2D11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 733.297, 303.6 )
+
+[node name="Area2D12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 119.521, 367.619 )
+
+[node name="Area2D13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 112.143, 461.959 )
+
+[node name="Area2D14" parent="." instance=ExtResource( 5 )]
+position = Vector2( 112.67, 412.944 )
+
+[node name="Area2D15" parent="." instance=ExtResource( 5 )]
+position = Vector2( 107.926, 517.298 )
+
+[node name="Area2D16" parent="." instance=ExtResource( 5 )]
+position = Vector2( 165.374, 516.771 )
+
+[node name="Area2D17" parent="." instance=ExtResource( 5 )]
+position = Vector2( 233.889, 520.46 )
+
+[node name="Area2D18" parent="." instance=ExtResource( 5 )]
+position = Vector2( 301.877, 518.879 )
+
+[node name="Area2D2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 331.483, 104.35 )
+
+[node name="Area2D3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 330.011, 149.621 )
+
+[node name="Area2D4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 331.115, 192.683 )
+
+[node name="Area2D5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 330.747, 229.12 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 37, 37 )
+format = 1
+tile_data = PoolIntArray( -131071, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -131061, 0, 0, -131053, 0, 0, -131052, 0, 0, -131051, 0, 0, -131050, 0, 0, -131049, 0, 0, -131048, 0, 0, -131047, 0, 0, -131046, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 0, -65519, 0, 0, -65518, 0, 0, -65517, 0, 0, -65516, 0, 0, -65515, 0, 0, -65514, 0, 0, -65513, 0, 0, -65512, 0, 0, -65511, 0, 0, -65510, 0, 0, -65509, 0, 0, 65534, 0, 0, 65535, 0, 0, 1, 0, 0, 7, 0, 0, 10, 0, 0, 19, 0, 0, 23, 0, 0, 26, 0, 0, 27, 0, 0, 131070, 0, 0, 65537, 0, 0, 65543, 0, 0, 65546, 0, 0, 65555, 0, 0, 65559, 0, 0, 65562, 0, 0, 65563, 0, 0, 196606, 0, 0, 131073, 0, 0, 131079, 0, 0, 131082, 0, 0, 131090, 0, 0, 131091, 0, 0, 131095, 0, 0, 131098, 0, 0, 131099, 0, 0, 262142, 0, 0, 196609, 0, 0, 196615, 0, 0, 196618, 0, 0, 196626, 0, 0, 196631, 0, 0, 196634, 0, 0, 196635, 0, 0, 327678, 0, 0, 262145, 0, 0, 262151, 0, 0, 262154, 0, 0, 262161, 0, 0, 262162, 0, 0, 262167, 0, 0, 262170, 0, 0, 262171, 0, 0, 393214, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 327696, 0, 0, 327697, 0, 0, 327702, 0, 0, 327703, 0, 0, 327706, 0, 0, 327707, 0, 0, 458750, 0, 0, 393217, 0, 0, 393238, 0, 0, 393242, 0, 0, 393243, 0, 0, 524285, 0, 0, 524286, 0, 0, 458753, 0, 0, 458774, 0, 0, 458778, 0, 0, 458779, 0, 0, 589821, 0, 0, 524289, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524310, 0, 0, 524314, 0, 0, 524315, 0, 0, 655357, 0, 0, 589825, 0, 0, 589829, 0, 0, 589839, 0, 0, 589846, 0, 0, 589850, 0, 0, 589851, 0, 0, 720893, 0, 0, 655361, 0, 0, 655365, 0, 0, 655375, 0, 0, 655381, 0, 0, 655382, 0, 0, 655386, 0, 0, 655387, 0, 0, 786429, 0, 0, 786430, 0, 0, 720897, 0, 0, 720901, 0, 0, 720911, 0, 0, 720917, 0, 0, 720922, 0, 0, 720923, 0, 0, 851966, 0, 0, 786433, 0, 0, 786437, 0, 0, 786438, 0, 0, 786439, 0, 0, 786440, 0, 0, 786441, 0, 0, 786442, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 0, 0, 786447, 0, 0, 786448, 0, 0, 786452, 0, 0, 786453, 0, 0, 786458, 0, 0, 786459, 0, 0, 917502, 0, 0, 917503, 0, 0, 851969, 0, 0, 851984, 0, 0, 851985, 0, 0, 851986, 0, 0, 851987, 0, 0, 851988, 0, 0, 851994, 0, 0, 851995, 0, 0, 983039, 0, 0, 917504, 0, 0, 917505, 0, 0, 917521, 0, 0, 917522, 0, 0, 917523, 0, 0, 917524, 0, 0, 917530, 0, 0, 917531, 0, 0, 1048575, 0, 0, 983040, 0, 0, 983041, 0, 0, 983042, 0, 0, 983043, 0, 0, 983044, 0, 0, 983045, 0, 0, 983046, 0, 0, 983047, 0, 0, 983048, 0, 0, 983049, 0, 0, 983050, 0, 0, 983051, 0, 0, 983052, 0, 0, 983053, 0, 0, 983054, 0, 0, 983055, 0, 0, 983056, 0, 0, 983057, 0, 0, 983058, 0, 0, 983059, 0, 0, 983060, 0, 0, 983061, 0, 0, 983062, 0, 0, 983063, 0, 0, 983064, 0, 0, 983065, 0, 0, 983066, 0, 0, 983067, 0, 0 )
+
+[node name="Flag" type="Sprite" parent="."]
+position = Vector2( 686.823, 464.655 )
+texture = ExtResource( 7 )
+
+[node name="Area2D" type="Area2D" parent="Flag"]
+script = ExtResource( 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Flag/Area2D"]
+anims/s = SubResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Flag/Area2D"]
+polygon = PoolVector2Array( -2.27649, 2.35339, 11.0018, -3.72583, -1.31665, -13.4846 )
+
+[node name="Player" type="Sprite" parent="Flag/Area2D"]
+visible = false
+position = Vector2( 3.32281, -5.80557 )
+texture = ExtResource( 10 )
+
+[node name="Enemys" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemys" instance=ExtResource( 6 )]
+position = Vector2( 195.924, 520.348 )
+
+[node name="Enemy2" parent="Enemys" instance=ExtResource( 6 )]
+position = Vector2( 571.352, 281.168 )
+
+[node name="Enemy5" parent="Enemys" instance=ExtResource( 6 )]
+position = Vector2( 110.6, 439.894 )
+
+[node name="Enemy7" parent="Enemys" instance=ExtResource( 6 )]
+position = Vector2( 767.739, 318.034 )
+
+[node name="Enemy8" parent="Enemys" instance=ExtResource( 6 )]
+position = Vector2( 627.926, 389.553 )
+scale = Vector2( 0.978734, 0.962076 )
+
+[node name="Enemy9" parent="Enemys" instance=ExtResource( 6 )]
+position = Vector2( 729.699, 381.005 )
+
+[node name="Enemy10" parent="Enemys" instance=ExtResource( 6 )]
+position = Vector2( 638.456, 463.767 )
+
+[node name="Enemy11" parent="Enemys" instance=ExtResource( 6 )]
+position = Vector2( 721.989, 466.594 )
+
+[node name="Enemy12" parent="Enemys" instance=ExtResource( 6 )]
+position = Vector2( 664.731, 414.892 )
+
+[node name="Enemy13" parent="Enemys" instance=ExtResource( 6 )]
+position = Vector2( 658.986, 265.353 )
+
+[node name="Enemy14" parent="Enemys" instance=ExtResource( 6 )]
+position = Vector2( 738.17, 270.207 )
+
+[node name="Enemy6" parent="Enemys" instance=ExtResource( 6 )]
+position = Vector2( 690.882, 317.744 )
+
+[node name="Enemy3" parent="Enemys" instance=ExtResource( 6 )]
+position = Vector2( 445.949, 280.182 )
+
+[node name="Enemy4" parent="Enemys" instance=ExtResource( 6 )]
+position = Vector2( 621.087, 319.659 )
+
+[node name="Area2D19" parent="." instance=ExtResource( 5 )]
+position = Vector2( 370.283, 270.751 )
+
+[node name="Area2D20" parent="." instance=ExtResource( 5 )]
+position = Vector2( 512.644, 276.714 )
+
+[node name="Scoreness" parent="." instance=ExtResource( 9 )]
+
+[node name="Area2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 330.577, 64.8672 )
+[connection signal="body_entered" from="Flag/Area2D" to="Flag/Area2D" method="_on_Area2D_body_entered"]
